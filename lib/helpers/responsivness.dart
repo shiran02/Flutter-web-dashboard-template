@@ -7,18 +7,18 @@ const int customScreenSize = 1100; // this is not needed every project
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget largeScreen;
-  final Widget mediumScreen;
-  final Widget smallScreen;
+  final Widget? mediumScreen;
+  final Widget? smallScreen;
 
   const ResponsiveWidget({
     super.key,
     required this.largeScreen,
-    required this.mediumScreen,
-    required this.smallScreen,
+    this.mediumScreen,
+    this.smallScreen,
   });
 
   static bool isSmallScreen(BuildContext context) {
-    return MediaQuery.of(context).size.width < smallScreenSize;
+    return MediaQuery.of(context).size.width < mediumScreenSize;
   }
 
   static bool isMediumScreen(BuildContext context) {
