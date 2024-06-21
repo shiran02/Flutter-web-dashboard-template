@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/helpers/responsivness.dart';
 import 'package:flutter_web_dashboard/layout.dart';
-import 'package:flutter_web_dashboard/widgets/large_screen.dart';
-import 'package:flutter_web_dashboard/widgets/small_screen.dart';
+
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_web_dashboard/controllers/menu_controllers.dart';
 
 void main() {
+  Get.put(menuController);
   runApp(MyApp());
 }
 
